@@ -8,3 +8,7 @@ wheels/
 
 # venv
 .venv
+
+camera_meta/
+save/
+output/
