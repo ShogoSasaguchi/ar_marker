@@ -9,7 +9,7 @@ from cv2 import aruco
 def generate_marker(output_dir_path, marker_id):
     # Size and offset value
     SIZE = 150
-    OFFSET = 10
+    OFFSET = 0
     X_OFFSET = Y_OFFSET = int(OFFSET) // 2
 
     # get dictionary and generate image
