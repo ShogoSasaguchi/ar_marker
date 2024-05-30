@@ -1,3 +1,5 @@
+import time
+
 import cv2
 from cv2 import aruco
 
@@ -36,6 +38,10 @@ def capture_camera():
         ar_image = aruco.drawDetectedMarkers(frame, corners, ids)
 
         cv2.imshow("frame", ar_image)
+
+        # スクリーンショット
+        if cv2.waitKey(1) & 0xFF == ord("s"):
+            cv2.imwrite(f"screenshot_{time.time()}.png", ar_image)
 
     capture.release()
     cv2.destroyAllWindows()
