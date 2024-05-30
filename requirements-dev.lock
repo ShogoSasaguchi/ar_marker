@@ -12,3 +12,5 @@ numpy==1.24.4
     # via opencv-python
 opencv-python==4.9.0.80
     # via ar-marker
+pypylon==3.0.1
+    # via ar-marker
