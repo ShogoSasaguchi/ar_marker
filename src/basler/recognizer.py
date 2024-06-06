@@ -1,9 +1,8 @@
 import time
 
 import cv2
+from basler.camera import Camera as BaslerCamera
 from cv2 import aruco
-
-from ar_marker.basler_camera import Camera as BaslerCamera
 
 dictionary = aruco.getPredefinedDictionary(aruco.DICT_4X4_50)
 parameters = aruco.DetectorParameters()
