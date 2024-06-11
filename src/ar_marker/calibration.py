@@ -5,7 +5,7 @@ import numpy as np
 
 # チェスボードの設定
 chessboard_size = (7, 7)  # 交点の数（幅, 高さ）
-square_size = 0.19  # チェスボードの正方形の一辺の長さ（メートル単位）
+square_size = 0.0008  # チェスボードの正方形の一辺の長さ（メートル単位）
 
 
 def main():
@@ -18,13 +18,14 @@ def main():
     obj_points = []
 
     # カメラからキャリブレーション画像を取得
-    cap = cv2.VideoCapture(1)
+    cap = cv2.VideoCapture(0)
     img_count = 0
 
     print("Start capturing images...")
     while img_count < 10:
         ret, img = cap.read()
         gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+        print(gray.shape)
         ret, corners = cv2.findChessboardCorners(gray, chessboard_size, None)
 
         if ret:

@@ -8,7 +8,7 @@ from cv2 import aruco
 
 def generate_marker(output_dir_path, marker_id):
     # Size and offset value
-    SIZE = 150
+    SIZE = 3000
     OFFSET = 0
     X_OFFSET = Y_OFFSET = int(OFFSET) // 2
 
@@ -24,7 +24,7 @@ def generate_marker(output_dir_path, marker_id):
     img[Y_OFFSET : Y_OFFSET + ar_img.shape[0], X_OFFSET : X_OFFSET + ar_img.shape[1]] = ar_img
 
     # save image
-    output_path = os.path.join(output_dir_path, f"marker_{marker_id}.png")
+    output_path = os.path.join(output_dir_path, f"marker_{('0' + str(marker_id))[-2:]}.png")
     cv2.imwrite(output_path, img)
 
     return output_path
@@ -39,7 +39,7 @@ if __name__ == "__main__":
     if not os.path.exists(args.output_dir_path):
         os.makedirs(args.output_dir_path)
 
-    for i in range(16):
+    for i in range(50):
         generate_marker(args.output_dir_path, i)
 
     # generate_marker(args.output_dir_path, args.marker_id)

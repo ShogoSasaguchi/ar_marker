@@ -25,7 +25,7 @@ def main():
     detector = aruco.ArucoDetector(dictionary, parameters)
 
     # カメラからの入力
-    cap = cv2.VideoCapture(1)
+    cap = cv2.VideoCapture(0)
 
     while True:
         _, frame = cap.read()
