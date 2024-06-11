@@ -5,6 +5,8 @@ description = "Add your description here"
 dependencies = [
     "opencv-python>=4.9.0.80",
     "pypylon>=3.0.1",
+    "pupil-apriltags>=1.0.4.post10",
+    "pillow>=10.3.0",
 ]
 readme = "README.md"
 requires-python = ">= 3.8"

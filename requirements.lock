@@ -6,11 +6,17 @@
 #   features: []
 #   all-features: false
 #   with-sources: false
+#   generate-hashes: false
 
 -e file:.
 numpy==1.24.4
     # via opencv-python
+    # via pupil-apriltags
 opencv-python==4.9.0.80
+    # via ar-marker
+pillow==10.3.0
+    # via ar-marker
+pupil-apriltags==1.0.4.post10
     # via ar-marker
 pypylon==3.0.1
     # via ar-marker
