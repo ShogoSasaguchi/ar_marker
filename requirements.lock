@@ -9,6 +9,10 @@
 #   generate-hashes: false
 
 -e file:.
+ffmpeg-python==0.2.0
+    # via ar-marker
+future==1.0.0
+    # via ffmpeg-python
 numpy==1.24.4
     # via opencv-python
     # via pupil-apriltags
